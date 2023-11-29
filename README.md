@@ -6,7 +6,7 @@
 * [2. Resumen del proyecto](#2-resumen-del-proyecto)
 * [3. Historias de Usuario](#3-historias-de-usuario)
 * [4. Diseño del producto](#4-diseño-del-producto)
-* [5. Criterios de aceptación del proyecto](#5-criterios-de-aceptación-del-proyecto)
+* [5. Objetivos de aprendizaje](#5-objetivos-de-aprendizaje)
 * [6. Herramientas utilizadas](#6-herramientas-utilizadas)
 
 ***
