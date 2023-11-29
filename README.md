@@ -1,4 +1,4 @@
-# Burger Queen (API Client)
+# Burger Queen (API Client) or "Make your orden on Burger Queen!"
 
 ## Índice
 
@@ -14,25 +14,24 @@
 
 ## 1. Preámbulo
 
-[React](https://es.react.dev/) y [Angular](https://angular.io/)
-son algunos de los _frameworks_ y _librerías_ de JavaScript más utilizados por
-lxs desarrolladorxs alrededor del mundo, y hay una razón para eso.
-En el contexto del navegador, [_mantener la interfaz sincronizada con el estado
-es difícil_](https://medium.com/dailyjs/the-deepest-reason-why-modern-javascript-frameworks-exist-933b86ebc445).
-Al elegir un _framework_ o _librería_ para nuestra interfaz, nos apoyamos en una
-serie de convenciones e implementaciones _probadas_ y _documentadas_ para
-resolver un problema común a toda interfaz web. Esto nos permite concentrarnos
-mejor (dedicar más tiempo) en las características _específicas_ de
-nuestra aplicación.
+Este es un proyecto pensado para la administración de pedidos, productos
+y trabajadores de un restaurante.
 
-Cuando elegimos una de estas tecnologías no solo importamos un pedacito de
-código para reusarlo (lo cuál es un gran valor per se), si no que adoptamos una
-**arquitectura**, una serie de **principios de diseño**, un **paradigma**, unas
-**abstracciones**, un **vocabulario**, una **comunidad**, etc.
+Usted podrá ver una interfaz para tres roles distintos según el uso que 
+necesiten dar a la aplicación: Mesera, cocinera, administradora.
 
-Como desarrolladora Front-end, estos kits de desarrollo pueden resultarte
-de gran ayuda para implementar rápidamente características de los proyectos en
-los que trabajes.
+Durante este proyecto se aprendió a desarrollar utilizando [Angular](https://angular.io/).
+Esto permitió descubrir cómo "pensar en componentes" al desarrollar, 
+para seguir las buenas prácticas como la modularización y reutilización
+del código, por ejemplo. Esto ayuda a un mejor mantenimiento de una aplicación
+y también facilita mucho el trabajo durante el desarrollo, gracias 
+a la estructura propuesta por este framework.
+
+Se ha leído la [documentación de Angular](https://docs.angular.lat/docs), así como utilizado otros recursos, 
+por ejemplo, cursos y tutoriales, para hacer un buen uso de esta herramienta 
+y para entender y conocer mejor la **arquitectura**, los **principios de diseño**,
+el **paradigma**, las **abstracciones**, el **vocabulario** y la **comunidad**,
+entre otras cosas.
 
 ## 2. Resumen del proyecto
 
