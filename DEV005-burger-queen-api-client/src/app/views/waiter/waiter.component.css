@@ -1,8 +1,15 @@
+.main-container {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  width: 90%;
 }
 
 main > .menu-section:not(:last-child) {
