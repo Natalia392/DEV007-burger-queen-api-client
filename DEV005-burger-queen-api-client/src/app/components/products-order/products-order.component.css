@@ -2,10 +2,11 @@
   display: flex;
   align-items: center;
   margin: 0px;
+  width: 100%;
 }
 
-td {
-  font-size: 22px;
+.product-div td {
+  font-size: 1.2rem;
   line-height: 1;
 }
 
@@ -18,29 +19,21 @@ td {
 
 
 .product-qty {
-  width: 3%;
   align-self: center;
 }
 
 .product-name {
   flex: 1;
   white-space: wrap;
-  /* Evita que el nombre del producto se parta en varias líneas */
   overflow: hidden;
   text-overflow: ellipsis;
-  /* Agrega puntos suspensivos si el nombre es demasiado largo */
-  /* margin-left: 5%; */
-  width: 25%;
 }
 
 .product-price {
-  width: 20%;
   align-self: center;
 }
 
 
 .buttons {
-  width: 78px;
   display: flex;
-  /* margin-left: 10px; */
 }

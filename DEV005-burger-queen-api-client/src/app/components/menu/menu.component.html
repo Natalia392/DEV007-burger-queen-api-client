@@ -1,11 +1,30 @@
-<section class="menu-container">
+<!-- <section class="menu-container">
   <div class="product-div" *ngFor="let product of productList">
     <div class="product-info">
       <p class="product-name">{{ product.name }}</p>
-      <p class="product-price">$ {{ product.price }}</p>
+      <p class="product-price">${{ product.price }}</p>
     </div>
     <div class="divButton">
       <app-button-add (click)="addToOrder(product)"></app-button-add>
     </div>
   </div>
-</section>
+</section> -->
+
+<table class="menu-container menu-table">
+  <thead>
+    <tr>
+      <th>Producto</th>
+      <th>Precio</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="product-tr" *ngFor="let product of productList">
+      <td class="product-name">{{ product.name }}</td>
+      <td class="product-price">${{ product.price }}</td>
+      <td class="add-btn">
+        <app-button-add (click)="addToOrder(product)"></app-button-add>
+      </td>
+    </tr>
+  </tbody>
+</table>

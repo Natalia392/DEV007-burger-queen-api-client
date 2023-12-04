@@ -9,7 +9,7 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  width: 90%;
+  width: 95%;
 }
 
 main > .menu-section:not(:last-child) {
@@ -20,9 +20,8 @@ main > .menu-section:not(:last-child) {
   background-color: none;
   display: flex;
   justify-content: space-around;
-  width: auto;
   padding-top: 1rem;
-  width: 810px;
+  box-sizing: border-box;
 }
 
 .order-div {
@@ -36,4 +35,5 @@ main > .menu-section:not(:last-child) {
 
 .menu-div {
   width: 45%;
+  box-sizing: border-box;
 }
