@@ -17,10 +17,9 @@
   align-items: center;
   position: relative;
   width: 50%;
-  /* width: auto; */
   color: #7a7976;
   text-align: left;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   flex: 1;
   padding: 10px 0;
   cursor: pointer;
