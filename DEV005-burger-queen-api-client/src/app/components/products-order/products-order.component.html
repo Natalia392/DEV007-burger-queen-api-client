@@ -3,7 +3,7 @@
     <td class="product-name">{{ product.product.name }}</td>
     <td class="product-price">$ {{ product.product.price*product.qty }}</td>
     <td class="buttons">
-      <app-button-add (click)="addToOrder(product)"></app-button-add>
       <app-button-sustract (click)="decrementProduct(i)"></app-button-sustract>
+      <app-button-add (click)="addToOrder(product)"></app-button-add>
     </td>
 </tr>

@@ -1,21 +1,35 @@
 <section class="order-section">
-  <div class="tab-content">
-    <p class="order-p">Resumen del pedido </p>
-  </div>
-  <div class="itemAndPrice">
-    <p>Item</p>
-    <p>Precio</p>
-  </div>
-  <div class="productsOrder">
-    <app-products-order [products]="productOrderList" (productAdded)="onProductClicked($event)"> </app-products-order>
-  </div>
-  <div class="clientAndTable">
-    <p>Cliente: {{ clientName }}</p>
-    <p>Mesa: {{ tableNumber }} </p>
-  </div>
-  <div class="clientAndTable">
-    TOTAL: {{ totalOrderPrice ? totalOrderPrice: 0 }}
-  </div>
-  <div *ngIf="showError" class="error-message">Faltan datos para generar la orden</div>
+  <table class="order-table">
+    <thead>
+      <tr>
+        <th colspan="2" class="resume">Resumen del pedido</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="item-price">
+        <td>Item</td>
+        <td>Precio</td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <app-products-order [products]="productOrderList" (productAdded)="onProductClicked($event)"></app-products-order>
+        </td>
+      </tr>
+      <tr>
+        <td>Cliente</td>
+        <td>{{ clientName }}</td>
+      </tr>
+      <tr>
+        <td>Mesa</td>
+        <td>{{ tableNumber }}</td>
+      </tr>
+      <tr>
+        <td colspan="2">TOTAL: {{ totalOrderPrice ? totalOrderPrice : 0 }}</td>
+      </tr>
+      <tr *ngIf="showError" class="error-message">
+        <td colspan="2">Faltan datos para generar la orden</td>
+      </tr>
+    </tbody>
+  </table>
   <button class="btn-send-order" (click)="createOrder()">Enviar Orden</button>
 </section>
