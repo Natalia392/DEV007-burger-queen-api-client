@@ -3,15 +3,15 @@ p {
   margin: 0px;
 }
 
-.productsOrder {
-  width: 22rem;
-}
+/* .products-order {
+
+} */
 
 .resume {
   width: 23rem;
   display: flex;
   justify-content: space-around;
-  font-size: 30px;
+  font-size: 2rem;
   color: #005A96;
   margin: 0px;
 }
@@ -21,26 +21,23 @@ p {
   color: #005A96;
   display: flex;
   justify-content: space-around;
-  font-size: 25px;
+  font-size: 1.5rem;
 }
 
 .order-section {
   background-color: white;
   border-radius: 10px;
-  border: 5px solid #005A96;
+  border: 0.3rem solid #005A96;
   display: grid;
   justify-items: center;
   align-items: center;
-  padding: 10px;
+  padding: 0.6rem;
 }
 
-.clientAndTable {
-  display: flex;
-  flex-direction: column;
-  text-align: right;
-  justify-items: space-around;
-  color: #005A96;
-  font-size: 23px;
+.client-data-table {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1;
 }
 
 .btn-send-order {
