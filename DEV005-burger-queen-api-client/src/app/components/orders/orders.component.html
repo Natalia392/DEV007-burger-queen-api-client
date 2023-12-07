@@ -15,13 +15,13 @@
           <app-products-order [products]="productOrderList" (productAdded)="onProductClicked($event)"></app-products-order>
         </td>
       </tr>
+    </tbody>
+    <tbody class="client-data-table">
       <tr>
-        <td>Cliente</td>
-        <td>{{ clientName }}</td>
+        <td>Cliente: {{ clientName }}</td>
       </tr>
       <tr>
-        <td>Mesa</td>
-        <td>{{ tableNumber }}</td>
+        <td>Mesa: {{ tableNumber }}</td>
       </tr>
       <tr>
         <td colspan="2">TOTAL: {{ totalOrderPrice ? totalOrderPrice : 0 }}</td>
