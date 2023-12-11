@@ -6,15 +6,15 @@
   justify-items: center;
   align-items: center;
   padding: 10px;
-  width: 415px;
+
 }
 
 table {
-  width: 415px;
+  padding: 1rem;
 }
 
 td {
-  text-align: center;
+  text-align: start;
   vertical-align: middle;
 }
 

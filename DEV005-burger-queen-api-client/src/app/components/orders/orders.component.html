@@ -24,12 +24,12 @@
         <td>Mesa: {{ tableNumber }}</td>
       </tr>
       <tr>
-        <td colspan="2">TOTAL: {{ totalOrderPrice ? totalOrderPrice : 0 }}</td>
+        <td colspan="2">TOTAL: ${{ totalOrderPrice ? totalOrderPrice : 0 }}</td>
       </tr>
       <tr *ngIf="showError" class="error-message">
         <td colspan="2">Faltan datos para generar la orden</td>
       </tr>
     </tbody>
   </table>
-  <button class="btn-send-order" (click)="createOrder()">Enviar Orden</button>
+  <button class="btn-send-order" (click)="createOrder()">Enviar Pedido</button>
 </section>
