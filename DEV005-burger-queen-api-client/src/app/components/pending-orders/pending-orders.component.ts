@@ -15,18 +15,18 @@ export class PendingOrdersComponent implements OnInit {
   constructor(private ordersService: OrderProductService) {}
 
   ngOnInit(): void {
-    this.addNewOrders();
+    this.showPendingOrders();
     this.updateOrdersView();
   }
 
-  addNewOrders() {
+  showPendingOrders() {
     this.ordersService.getOrders().subscribe((data) => {
       this.pendingOrders = data.filter(order => order.status === 'pending');
     });
   }
 
   updateOrdersView(): void {
-    this.addNewOrders();
+    // this.addNewOrders();
     this.pendingOrders = this.pendingOrders.slice().sort((a, b) => {
       return new Date(b.dateEntry).getTime() - new Date(a.dateEntry).getTime();
     });

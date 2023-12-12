@@ -3,25 +3,50 @@
   background-color: white;
   border: 5px solid #005A96;
   border-radius: 10px;
-  justify-items: center;
-  align-items: center;
   padding: 10px;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-table {
-  padding: 1rem;
+.orders-container {
+  display: flex;
+  justify-content: flex-start;
 }
 
-td {
-  text-align: start;
-  vertical-align: middle;
+.col-3 ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow-wrap: break-word;
 }
 
-caption {
+.li-center, .li-left, .li-right {
+  display: flex;
+  line-height: 1;
+  margin-bottom: 1.5rem;
+}
+
+.li-center {
+  justify-content: space-between;
+}
+
+.li-right {
+  justify-content: end;
+}
+
+.th {
+  margin: 1rem 0rem 0rem 0rem;
+  line-height: 1;
+  height:3rem;
+}
+
+h2 {
   color: #005A96;
   font-size: 30px;
   line-height: 1;
+  margin: 0;
 }
 
 .image-checkbox {

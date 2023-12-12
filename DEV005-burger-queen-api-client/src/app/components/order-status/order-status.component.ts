@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ProcessedOrder } from 'src/app/models/products.interface';
+import { ProcessedOrder, RPOrder } from 'src/app/models/products.interface';
 import { OrderProductService } from 'src/app/services/orderProduct.service';
 @Component({
   selector: 'app-order-status',
@@ -8,26 +8,34 @@ import { OrderProductService } from 'src/app/services/orderProduct.service';
 })
 export class OrderStatusComponent implements OnInit {
 
-  orders: ProcessedOrder[] = [];
+  ordersReady: ProcessedOrder[] = [];
+  pendingOrders: RPOrder[] = [];
 
-  constructor(private orderService: OrderProductService) {}
+  constructor(private ordersService: OrderProductService) {}
 
   ngOnInit(): void {
     this.getOrderReady();
+    this.showPendingOrders();
   }
 
   getOrderReady() {
-    this.orderService.getOrdersReady().subscribe((data) => {
-      this.orders = data;
+    this.ordersService.getOrdersReady().subscribe((data) => {
+      this.ordersReady = data;
     });
   }
 
   markOrderDelivered(id: number) {
-    const index = this.orders.findIndex(item => item.id === id);
+    const index = this.ordersReady.findIndex(item => item.id === id);
     if(index !== -1)
-    this.orderService.markReady(id).subscribe((data) => {
+    this.ordersService.markReady(id).subscribe((data) => {
       console.log(data);
     })
+  }
+
+  showPendingOrders() {
+    this.ordersService.getOrders().subscribe((data) => {
+      this.pendingOrders = data.filter(order => order.status === 'pending');
+    });
   }
 
   // getOrdersDelivered() {
