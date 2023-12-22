@@ -14,7 +14,7 @@
       <ul>
         <li class="li-center" *ngFor="let orderReady of ordersReady">
           {{ orderReady.client }}
-          <input (click)="markOrderDelivered(orderReady.id)" type="checkbox" id="order{{orderReady.id}}"
+          <input title="chek-order-ready" (click)="markOrderDelivered(orderReady.id)" type="checkbox" id="order{{orderReady.id}}"
             class="image-checkbox">
           <label for="order{{orderReady.id}}"></label>
         </li>
@@ -28,26 +28,4 @@
       </ul>
     </div>
   </article>
-  <!-- <table class="order-status-table">
-    <caption>Estado de los pedidos</caption>
-    <thead>
-      <tr>
-        <th>En proceso</th>
-        <th>Listos</th>
-        <th>Entregados</th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <tr>
-        <td *ngFor="let order of pendingOrders"> {{order.client}} </td>
-        <td *ngFor="let order of ordersReady">
-          <input (click)="markOrderDelivered(order.id)" type="checkbox" id="order{{order.id}}" class="image-checkbox">
-          <label for="order{{order.id}}"></label>
-        </td>
-        <td *ngFor="let order of pendingOrders">Entregados</td>
-      </tr>
-    </tbody>
-  </table> -->
-
 </section>
