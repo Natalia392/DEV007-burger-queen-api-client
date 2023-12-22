@@ -1,9 +1,9 @@
 .status-orders {
-  font-size: 20px;
+  font-size: 1rem;
   background-color: white;
-  border: 5px solid #005A96;
+  border: 0.3rem solid #005A96;
   border-radius: 10px;
-  padding: 10px;
+  padding: 0.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,7 +12,17 @@
 
 .orders-container {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  gap: 1rem;
+}
+
+.small-col {
+  width: 28%;
+}
+
+.big-col {
+  width: 44%;
 }
 
 .col-3 ul {
@@ -33,9 +43,9 @@
   justify-content: space-between;
 }
 
-/* .li-right {
-  justify-content: end;
-} */
+.li-right {
+  justify-content: flex-start;
+}
 
 .th {
   margin: 1rem 0rem 0rem 0rem;
@@ -56,13 +66,13 @@ h2 {
 
 .image-checkbox + label {
   display: inline-block;
-  width: 2rem;
-  height: 2rem;
+  width: 1.6rem;
+  height: 1.6rem;
   background: url('../../../assets/images/unchecked.png') no-repeat;
-  background-size: 1.9rem 1.9rem;
+  background-size: 100%;
 }
 
 .image-checkbox:checked + label {
   background: url('../../../assets/images/check.png') no-repeat;
-  background-size: 0.3rem 0.3rem;
+  background-size: 100%;
 }

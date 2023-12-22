@@ -2,14 +2,14 @@
   <h2>Estado de los pedidos</h2>
   <article class="orders-container">
     <!-- En proceso -->
-    <div class="col-3">
+    <div class="col-3 small-col">
       <h3 class="th">En proceso</h3>
       <ul>
         <li class="li-left" *ngFor="let pendingOrder of pendingOrders">{{ pendingOrder.client }}</li>
       </ul>
     </div>
     <!-- Listos -->
-    <div class="col-3">
+    <div class="col-3 big-col">
       <h3 class="th">Listos</h3>
       <ul>
         <li class="li-center" *ngFor="let orderReady of ordersReady">
@@ -21,7 +21,7 @@
       </ul>
     </div>
     <!-- Entregados -->
-    <div class="col-3">
+    <div class="col-3 small-col">
       <h3 class="th">Entregados</h3>
       <ul>
         <li class="li-right" *ngFor="let deliveredOrder of ordersReady">{{ deliveredOrder.client }}</li>
