@@ -1,0 +1,78 @@
+.status-orders {
+  font-size: 1rem;
+  background-color: white;
+  border: 0.3rem solid #005A96;
+  border-radius: 10px;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.orders-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 1rem;
+}
+
+.small-col {
+  width: 28%;
+}
+
+.big-col {
+  width: 44%;
+}
+
+.col-3 ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow-wrap: break-word;
+}
+
+.li-center, .li-left, .li-right {
+  display: flex;
+  line-height: 1;
+  height: 1.3rem;
+  margin-bottom: 1.5rem;
+}
+
+.li-center {
+  justify-content: space-between;
+}
+
+.li-right {
+  justify-content: flex-start;
+}
+
+.th {
+  margin: 1rem 0rem 0rem 0rem;
+  line-height: 1;
+  height:3rem;
+}
+
+h2 {
+  color: #005A96;
+  font-size: 30px;
+  line-height: 1;
+  margin: 0;
+}
+
+.image-checkbox {
+  display: none;
+}
+
+.image-checkbox + label {
+  display: inline-block;
+  width: 1.6rem;
+  height: 1.6rem;
+  background: url('../../../assets/images/unchecked.png') no-repeat;
+  background-size: 100%;
+}
+
+.image-checkbox:checked + label {
+  background: url('../../../assets/images/check.png') no-repeat;
+  background-size: 100%;
+}
