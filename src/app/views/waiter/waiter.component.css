@@ -17,11 +17,10 @@ main > .menu-section:not(:last-child) {
 }
 
 .menu-order-section {
-  background-color: none;
   display: flex;
   justify-content: space-around;
-  padding-top: 1rem;
   box-sizing: border-box;
+  gap: 0.6rem;
 }
 
 .order-div {
