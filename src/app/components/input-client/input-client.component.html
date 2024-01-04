@@ -1,10 +1,10 @@
 <div class="inputs-container">
-  <div class="input-client">
+  <div class="input-client-container">
     <label for="clientName" class="labelName">Nombre del cliente</label>
-    <input type="text" (keyup)="UpdateName()" [(ngModel)]="clientName"  id="clientName" class="inputClient" required placeholder="Ingrese nombre">
+    <input type="text" (keyup)="UpdateName()" [(ngModel)]="clientName" id="clientName" class="inputClient" required placeholder="Ingrese nombre">
   </div>
 
-  <div class="input-table">
+  <div class="input-table-container">
     <label for="clientTable" class="labelTable">Mesa</label>
     <input type="text" (keyup)="UpdateTable()" [(ngModel)]="tableNumber" id="clientTable" class="inputTable inputClient " required placeholder="N°" maxlength="3">
   </div>
