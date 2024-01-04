@@ -1,11 +1,11 @@
 <div class="container">
-  <div class="inputContainer">
+  <div class="input-client">
     <label class="labelName">Nombre del cliente</label>
-    <label class="labelTable">Mesa</label>
+    <input type="text"  (keyup)="UpdateName()"  [(ngModel)]="clientName"  id="email" class="inputClient" required placeholder="Ingrese nombre">
   </div>
 
   <div class="inputContainer">
-    <input type="text"  (keyup)="UpdateName()"  [(ngModel)]="clientName"  id="email" class="inputClient" required placeholder="Ingrese nombre">
+    <label class="labelTable">Mesa</label>
     <input type="text" (keyup)="UpdateTable()" [(ngModel)]="tableNumber"    class="inputTable inputClient " required placeholder="N°" maxlength="3">
   </div>
 </div>
