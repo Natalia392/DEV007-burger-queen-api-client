@@ -36,3 +36,7 @@ main > .menu-section:not(:last-child) {
   width: 45%;
   box-sizing: border-box;
 }
+
+.input-client {
+  width: 100%;
+}
