@@ -9,17 +9,17 @@ import { OrderProductService } from 'src/app/services/orderProduct.service';
 })
 export class OrdersReadyComponent implements OnInit {
   // @Input() readyOrders: ResponseOrder[] = [];
-  ordersReady: ProcessedOrder[] = [];
+  ordersDelivering: ProcessedOrder[] = [];
   prepTime = 0;
   constructor(private orderService: OrderProductService) {}
 
   ngOnInit(): void {
-    this.getOrderReady();
+    this.getOrderDelivering();
   }
 
-  getOrderReady() {
+  getOrderDelivering() { // cambia nombre de función por delivering, porque no es "listos", sino delivering
     this.orderService.getOrdersReady().subscribe((data) => {
-      this.ordersReady = data.filter(order => order.status === 'ready');
+      this.ordersDelivering = data.filter(order => order.status === 'delivering');
     })
   }
 }

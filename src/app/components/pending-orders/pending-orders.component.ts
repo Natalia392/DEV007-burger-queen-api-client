@@ -38,8 +38,8 @@ export class PendingOrdersComponent implements OnInit {
       this.ordersService.processOrder(id).subscribe((data) => {
         this.pendingOrders.splice(index, 1);
         this.orderReady.emit(data);
+        console.log(data);
       })
-
     }
   }
 
