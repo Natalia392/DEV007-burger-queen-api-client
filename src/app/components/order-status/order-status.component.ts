@@ -10,12 +10,16 @@ export class OrderStatusComponent implements OnInit {
 
   ordersReady: ProcessedOrder[] = [];
   pendingOrders: RPOrder[] = [];
+  ordersDelivering: RPOrder[] = [];
+  ordersDelivered: ProcessedOrder[] = [];
 
   constructor(private ordersService: OrderProductService) {}
 
   ngOnInit(): void {
     this.getOrderReady();
     this.showPendingOrders();
+    this.showOrdersDelivering();
+    this.getOrdersDelivered();
   }
 
   getOrderReady() {
@@ -28,19 +32,30 @@ export class OrderStatusComponent implements OnInit {
     const index = this.ordersReady.findIndex(item => item.id === id);
     if(index !== -1)
     this.ordersService.markReady(id).subscribe((data) => {
-      console.log(data);
+      this.ordersReady = this.ordersReady.splice(index, 1);
+      this.ordersDelivered.push(data);
     })
   }
 
   showPendingOrders() {
     this.ordersService.getOrders().subscribe((data) => {
       this.pendingOrders = data.filter(order => order.status === 'pending');
+      console.log(this.pendingOrders);
     });
   }
 
-  // getOrdersDelivered() {
-  //   this.orderService.getOrdersReady().subscribe((data) => {
-  //     this.ordersDelivered = data.filter(order => order.status === 'delivered');
-  //   })
-  // }
+  showOrdersDelivering() {
+    this.ordersService.getOrders().subscribe((data) => {
+      this.ordersDelivering = data.filter(order => order.status === 'delivering');
+      console.log(this.ordersDelivering);
+    })
+  }
+
+  getOrdersDelivered() {
+    this.ordersService.getOrdersReady().subscribe((data) => { // Modificar la función del servicio (falta crearla) por la que lo cambia efectivamente a delivered.
+      this.ordersDelivered = data.filter(order => order.status === 'delivered');
+      console.log(this.ordersDelivered);
+    })
+  }
+
 }
