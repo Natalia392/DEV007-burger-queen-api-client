@@ -2,7 +2,7 @@
   <div class="title">Pedidos por preparar</div>
   <div class="scroll-div">
     <div class="orders-container" *ngFor="let order of pendingOrders">
-      <div class="pending-order">
+      <div (click)="showItem(order)" class="pending-order">
         <ul>
           <li>Cliente: {{ order.client }} </li>
           <li *ngFor="let product of order.products">
