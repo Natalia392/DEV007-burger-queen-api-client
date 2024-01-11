@@ -1,6 +1,7 @@
 import { Component, OnInit, Output, EventEmitter} from '@angular/core';
 import { RPOrder } from 'src/app/models/products.interface';
 import { OrderProductService } from 'src/app/services/orderProduct.service';
+import { TimeTrackingService } from 'src/app/services/time-tracking.service';
 
 
 @Component({
@@ -16,7 +17,7 @@ export class PendingOrdersComponent implements OnInit {
 
   elapsedMinutes = 0;
 
-  constructor(private ordersService: OrderProductService) {}
+  constructor(private ordersService: OrderProductService, private timeTrackingService: TimeTrackingService) {}
 
   ngOnInit(): void {
     this.showPendingOrders();
@@ -52,6 +53,8 @@ export class PendingOrdersComponent implements OnInit {
         const elapsedTime = endTime.getTime() - startTime.getTime();
         const elapsedSeconds = Math.floor(elapsedTime / 1000);
         this.elapsedMinutes = Math.floor(elapsedSeconds / 60);
+
+        this.timeTrackingService.setElapsedTime(id, this.elapsedMinutes); // línea agregada tras la creación del servicio
 
         this.pendingOrders.splice(index, 1);
         this.orderReady.emit(data);
